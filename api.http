@@ -1,0 +1,41 @@
+GET http://localhost:3000/bank-accounts
+
+###
+GET http://localhost:3000/bank-accounts/beadbf72-2ae6-4108-a47e-8330d04f059c
+
+###
+GET http://localhost:3000/bank-accounts/a5539299-c51d-4f6b-87b2-db8168222762
+
+
+###
+POST http://localhost:3000/bank-accounts
+Content-Type: application/json
+
+{
+    "account_number": "1111-11"
+}
+
+###
+POST http://localhost:3000/bank-accounts
+Content-Type: application/json
+
+{
+    "account_number": "2222-22"
+}
+
+//beadbf72-2ae6-4108-a47e-8330d04f059c
+//a5539299-c51d-4f6b-87b2-db8168222762
+
+###
+POST http://localhost:3000/bank-accounts/transfer
+Content-Type: application/json
+
+{
+    "account_number_src": "1111-11",
+    "account_number_dest": "2222-22",
+    "amount": 100
+}
+
+###
+GET http://localhost:3000/test
+X-Tenant-Id: 2
